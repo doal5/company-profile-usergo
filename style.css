@@ -1,0 +1,62 @@
+.navbar-ul a:hover {
+  color: black;
+}
+
+.navbar ul li:hover > ul {
+  display: initial;
+}
+
+.btn-floating {
+  position: fixed;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  border: 0;
+  z-index: 9999;
+  color: white;
+  transition: 0.2s;
+}
+
+.btn-floating:hover {
+  width: auto;
+  padding: 0px 30px;
+  cursor: pointer;
+}
+
+.btn-floating span {
+  font-size: 16px;
+  margin-left: 5px;
+  transition: 0.2s;
+  line-height: 0px;
+  display: none;
+}
+
+.btn-floating:hover span {
+  display: inline-block;
+}
+
+.btn-floating:hover img {
+  margin-bottom: -3px;
+}
+
+.btn-floating.whatsapp {
+  bottom: 25px;
+  background-color: #34af23;
+  border: 2px solid #fff;
+}
+
+.btn-floating.whatsapp:hover {
+  background-color: #1f7a12;
+}
+
+.btn-floating.facebook {
+  bottom: 85px;
+  background-color: #1876f3;
+}
+
+@media (max-width: 576px) {
+  .btn-floating {
+    background-color: transparent;
+  }
+}
