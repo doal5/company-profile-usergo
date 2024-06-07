@@ -1,3 +1,21 @@
+/* .navbar {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+} */
+
+h1 {
+  color: white;
+  font-weight: 700;
+}
+.navbar {
+  background-color: transparent;
+}
+.navbar a {
+  color: white;
+}
+.dropdown-menu {
+  color: black;
+}
 .nav-link {
   position: relative;
 }
@@ -21,8 +39,13 @@
 }
 
 .nav-link:hover {
-  color: black;
+  color: white;
   font-weight: 600;
+}
+.navbar,
+.dropdown-menu,
+.dropdown-item {
+  color: black;
 }
 
 .navbar ul li:hover > ul {
