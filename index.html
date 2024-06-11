@@ -22,26 +22,6 @@
         <a class="navbar-brand" href="#"
           ><img src="asset/img/usergo.png" width="80" alt=""
         /></a>
-        <div class="dropdown">
-          <button
-            class="btn btn-sm btn-primary dropdown-toggle"
-            type="button"
-            id="languageDropdown"
-            data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Change Language
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-            <li>
-              <a class="dropdown-item" href="#" id="englishOption">English</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#" id="indonesianOption"
-                >Indonesia</a
-              >
-            </li>
-          </ul>
-        </div>
         <!-- ... -->
 
         <button
@@ -73,19 +53,38 @@
           <div class="offcanvas-body dark">
             <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link mx-lg-2 active" href="#" style="color: white"
+                <a
+                  class="nav-link mx-lg-2 active translate"
+                  href="#"
+                  style="color: white"
+                  data-en="Home"
+                  data-id="Beranda"
                   >Home</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link mx-lg-2" href="#">About</a>
+                <a
+                  class="nav-link mx-lg-2 translate"
+                  data-en="About"
+                  data-id="Tentang"
+                  href="#"
+                  >About</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link mx-lg-2" href="#">Contact</a>
+                <a
+                  class="nav-link mx-lg-2 translate"
+                  data-en="Contact"
+                  data-id="Kontak"
+                  href="#"
+                  >Contact</a
+                >
               </li>
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link mx-lg-2 dropdown-toggle"
+                  class="nav-link mx-lg-2 dropdown-toggle translate"
+                  data-en="Dropdown"
+                  data-id="Menu Tarik"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -93,18 +92,65 @@
                   Dropdown
                 </a>
                 <ul class="dropdown-menu" style="background-color: black">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <a
+                      class="dropdown-item translate"
+                      data-en="Action"
+                      data-id="Aksi"
+                      href="#"
+                      >Action</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item translate"
+                      data-en="Another action"
+                      data-id="Tindakan Lain"
+                      href="#"
+                      >Another action</a
+                    >
+                  </li>
                   <li>
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a
+                      class="dropdown-item translate"
+                      href="#"
+                      data-en="Something else here"
+                      data-id="Sesuatu yang lain disini"
+                      >Something else here</a
+                    >
                   </li>
                 </ul>
               </li>
             </ul>
           </div>
+        </div>
+        <div class="dropdown bahasa">
+          <button
+            class="btn btn-xs dropdown-toggle"
+            type="button"
+            id="languageDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <img class="active" id="activeFlag" width="50px" alt="" />
+          </button>
+          <ul
+            class="dropdown-menu"
+            aria-labelledby="languageDropdown"
+            style="background: transparent; width: 50px">
+            <li>
+              <a class="dropdown-item" href="#" id="englishOption"
+                ><img src="asset/img/inggris.png" width="50" alt=""
+              /></a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" id="indonesianOption"
+                ><img src="asset/img/indonesia.png" width="50" alt=""
+              /></a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
@@ -128,7 +174,7 @@
     </div>
     <!-- end social media floatings -->
 
-    <div class="head container-fluid text-center">
+    <div class="head container-fluid">
       <!--kita perlu menambahkan atribut data-en dan data-id pada elemen-elemen yang ingin diubah teksnya ketika bahasa dipilih.-->
       <h1
         class="translate"
@@ -188,7 +234,7 @@
       <h1>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, ab.
       </h1>
-      <h4 data-aos="zoom-out-up" data-aos-duration="1000">
+      <h4 data-aos="" data-aos-duration="1000">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam
         reprehenderit omnis rem ad itaque corporis?
       </h4>
@@ -206,7 +252,7 @@
               height: 500;
               float: right;
               margin-right: 10px;
-              margin-left: 40px;
+              margin-left: 30px;
             "
             data-aos="fade-up-right"
             data-aos-duration="2000" />
@@ -239,13 +285,13 @@
               width: 600px;
               height: 500;
               float: left;
-              margin-right: 40px;
+              margin-right: 20px;
               margin-left: 10px;
             "
-            data-aos="fade-up-left"
+            data-aos="fade-down-left"
             data-aos-duration="2000" />
           <h1
-            data-aos="fade-down-left"
+            data-aos="fade-up-right"
             data-aos-duration="1000"
             data-aos-delay="100">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
@@ -275,7 +321,7 @@
               height: 500;
               float: right;
               margin-right: 10px;
-              margin-left: 40px;
+              margin-left: 30px;
             "
             data-aos="fade-up-right"
             data-aos-duration="2000" />
@@ -491,6 +537,20 @@
           element.textContent = element.getAttribute("data-id");
         });
       }
+      document.getElementById("activeFlag").src = "asset/img/indonesia.png";
+      document
+        .getElementById("englishOption")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Mencegah tindakan default link
+          document.getElementById("activeFlag").src = "asset/img/inggris.png";
+        });
+
+      document
+        .getElementById("indonesianOption")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Mencegah tindakan default link
+          document.getElementById("activeFlag").src = "asset/img/indonesia.png";
+        });
     </script>
   </body>
 </html>

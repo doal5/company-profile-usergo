@@ -89,6 +89,10 @@ h1 {
   margin-top: 100px;
 }
 .ht {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin-top: 30px;
   color: white;
 }
@@ -114,6 +118,10 @@ h1 {
 .head7 {
   margin-top: 150px;
   color: white;
+}
+
+.bahasa {
+  margin-right: 30px;
 }
 
 .head9 h4 {
@@ -159,8 +167,9 @@ h1 {
 
 .last-content {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   font-family: serif;
   background-image: url("asset/img/bbbb.gif");
   background-position: center 30px;
