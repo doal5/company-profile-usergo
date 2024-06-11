@@ -9,8 +9,12 @@
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="icon" href="asset/img/usergo.png" type="image/gif" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg fixed-top">
@@ -103,38 +107,52 @@
     <!-- end social media floatings -->
 
     <div class="head container-fluid text-center">
-      <h1>Kami Menyediakan Layanan.</h1>
-      <h2>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, ea..
+      <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+        HTML ajah nich
+      </h1>
+      <h2 data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam
+        voluptatem a quas praesentium cum cupiditate illum neque iure accusamus
+        veniam.
       </h2>
     </div>
 
     <div class="content-two container-fluid">
-      <div
-        class="row shadow-lg"
-        style="
-          background-image: url('asset/img/bg.jpg');
-          width: 320px;
-          height: 500px;
-        ">
-        <h1>Lorem,</h1>
+      <div class="zoom">
+        <div
+          class="row-satu shadow-lg"
+          style="
+            background-image: url('asset/img/bg.jpg');
+            width: 320px;
+            height: 500px;
+          "
+          data-aos="fade-right"
+          data-aos-duration="2000">
+          <h1>Lorem,</h1>
+        </div>
       </div>
       <div
-        class="row shadow-lg"
+        class="row-dua shadow-lg"
         style="
-          background-image: url('asset/img/wp.gif');
+          background-image: url('asset/img/dg.jpg');
           width: 320px;
           height: 500px;
-        ">
+          background-position: 500px;
+        "
+        data-aos="fade-up"
+        data-aos-duration="1000">
         <h1>Content</h1>
       </div>
       <div
-        class="row shadow-lg"
+        class="row-tiga shadow-lg"
         style="
           background-image: url('asset/img/tv.jpeg');
           width: 320px;
           height: 500px;
-        ">
+          background-position: 600px;
+        "
+        data-aos="fade-left"
+        data-aos-duration="1000">
         <h1>Content</h1>
       </div>
     </div>
@@ -143,7 +161,7 @@
       <h1>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, ab.
       </h1>
-      <h4>
+      <h4 data-aos="zoom-out-up" data-aos-duration="1000">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam
         reprehenderit omnis rem ad itaque corporis?
       </h4>
@@ -162,12 +180,22 @@
               float: right;
               margin-right: 10px;
               margin-left: 40px;
-            " />
-          <h1>
+            "
+            data-aos="fade-up-right"
+            data-aos-duration="2000" />
+          <h1
+            data-aos="fade-down-right"
+            data-aos-duration="1000"
+            data-aos-delay="100">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
             aperiam.
           </h1>
-          <p style="color: white">
+          <p
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+            style="color: white">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
             reprehenderit.
           </p>
@@ -186,12 +214,23 @@
               float: left;
               margin-right: 40px;
               margin-left: 10px;
-            " />
-          <h1>
+            "
+            data-aos="fade-up-left"
+            data-aos-duration="2000" />
+          <h1
+            data-aos="fade-down-left"
+            data-aos-duration="1000"
+            data-aos-delay="100">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
             aperiam.
           </h1>
-          <p style="color: white" class="">
+          <p
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+            style="color: white"
+            class="">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
             reprehenderit.
           </p>
@@ -210,12 +249,22 @@
               float: right;
               margin-right: 10px;
               margin-left: 40px;
-            " />
-          <h1>
+            "
+            data-aos="fade-up-right"
+            data-aos-duration="2000" />
+          <h1
+            data-aos="fade-down-right"
+            data-aos-duration="1000"
+            data-aos-delay="100">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
             aperiam.
           </h1>
-          <p style="color: white">
+          <p
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+            style="color: white">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
             reprehenderit.
           </p>
@@ -223,6 +272,16 @@
       </div>
     </div>
     <!-- /.container -->
+
+    <div class="last-content container-fluid">
+      <div class="row-last-content">
+        <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum</h1>
+        <h4>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque,
+          officia.
+        </h4>
+      </div>
+    </div>
 
     <div class="head9 container text-center">
       <div class="row align-items-center">
@@ -239,11 +298,11 @@
     <!-- Footer -->
     <footer
       class="text-center text-lg-start text-white"
-      style="background-color: #1c2331">
+      style="background-color: #141415">
       <!-- Section: Social media -->
       <section
         class="d-flex justify-content-between p-4"
-        style="background-color: #1c2331">
+        style="background-color: #141415">
         <!-- Left -->
         <div class="me-5">
           <span>Get connected with us on social networks:</span>
@@ -375,5 +434,10 @@
       src="https://kit.fontawesome.com/57ce01442e.js"
       crossorigin="anonymous"></script>
     <script src="asset/js/script.js"></script>
+    <script src="asset/js/anim.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

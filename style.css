@@ -44,14 +44,19 @@
 }
 
 body {
-  background-color: #202434;
+  background-color: #141415;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 h1,
-h2 {
+h2,
+h4 {
   color: white;
+}
+
+h1 {
+  font-weight: 600;
 }
 
 .fitur {
@@ -67,6 +72,7 @@ h2 {
 .head {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   font-family: serif;
   background-image: url("asset/img/bbbb.gif");
@@ -122,8 +128,45 @@ h2 {
   margin-top: 100px;
 }
 
-.content-two .row {
+.row-satu {
+  transition: transform 0.3s ease;
   margin: 10px;
+}
+.row-dua {
+  transition: transform 0.3s ease;
+  margin: 10px;
+}
+.row-tiga {
+  transition: transform 0.3s ease;
+  margin: 10px;
+}
+
+.row-satu:hover {
+  transform: scale(
+    1.1
+  ); /* Ubah angka ini sesuai dengan tingkat zoom yang diinginkan */
+}
+.row-dua:hover {
+  transform: scale(
+    1.1
+  ); /* Ubah angka ini sesuai dengan tingkat zoom yang diinginkan */
+}
+.row-tiga:hover {
+  transform: scale(
+    1.1
+  ); /* Ubah angka ini sesuai dengan tingkat zoom yang diinginkan */
+}
+
+.last-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-family: serif;
+  background-image: url("asset/img/bbbb.gif");
+  background-position: center 30px;
+  margin-bottom: 100px;
+  width: 100%;
+  height: 100vh;
 }
 
 footer {
