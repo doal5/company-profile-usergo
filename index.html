@@ -22,6 +22,28 @@
         <a class="navbar-brand" href="#"
           ><img src="asset/img/usergo.png" width="80" alt=""
         /></a>
+        <div class="dropdown">
+          <button
+            class="btn btn-sm btn-primary dropdown-toggle"
+            type="button"
+            id="languageDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Change Language
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+            <li>
+              <a class="dropdown-item" href="#" id="englishOption">English</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#" id="indonesianOption"
+                >Indonesia</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- ... -->
+
         <button
           class="navbar-toggler"
           type="button"
@@ -107,13 +129,18 @@
     <!-- end social media floatings -->
 
     <div class="head container-fluid text-center">
-      <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-        HTML ajah nich
+      <!--kita perlu menambahkan atribut data-en dan data-id pada elemen-elemen yang ingin diubah teksnya ketika bahasa dipilih.-->
+      <h1
+        class="translate"
+        data-en="We Provide Services."
+        data-id="Kami Menyediakan Layanan."
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="100">
+        Kami Menyediakan Layanan.
       </h1>
       <h2 data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam
-        voluptatem a quas praesentium cum cupiditate illum neque iure accusamus
-        veniam.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, ea..
       </h2>
     </div>
 
@@ -434,10 +461,36 @@
       src="https://kit.fontawesome.com/57ce01442e.js"
       crossorigin="anonymous"></script>
     <script src="asset/js/script.js"></script>
+
     <script src="asset/js/anim.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
+
+      const englishOption = document.getElementById("englishOption");
+      const indonesianOption = document.getElementById("indonesianOption");
+
+      englishOption.addEventListener("click", () => {
+        translateToEnglish();
+      });
+
+      indonesianOption.addEventListener("click", () => {
+        translateToIndonesian();
+      });
+
+      function translateToEnglish() {
+        // Ubah teks pada halaman ke bahasa Inggris
+        document.querySelectorAll(".translate").forEach((element) => {
+          element.textContent = element.getAttribute("data-en");
+        });
+      }
+
+      function translateToIndonesian() {
+        // Ubah teks pada halaman ke bahasa Indonesia
+        document.querySelectorAll(".translate").forEach((element) => {
+          element.textContent = element.getAttribute("data-id");
+        });
+      }
     </script>
   </body>
 </html>
